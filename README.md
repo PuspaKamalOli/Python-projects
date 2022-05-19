@@ -1,2 +1,2 @@
-# Python-basic-projects
+# Python-projects
 -python projects for practise
