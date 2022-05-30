@@ -1,26 +1,26 @@
-# multiple inheritance:a child class having multiple parents can inherit all the methods from its parents
-
-class Terrestrial:
-    def live(self):
-        print("they can live on land")
-
-    def run(self):
-        print('they can run faster in ground')
-
-
+# multiple inheritance:a child class having multiple parents can inherit their all methods
 class Aquatic:
-    def respire(self):
-        print('they can breathe in water')
-
     def swim(self):
         print('they can swim in water')
 
+    def respire(self):
+        print('they can breathe in water')
 
-class Frog(Terrestrial, Aquatic):
+
+class Terrestrial:
+    def live(self):
+        print('they live in land and can run faster')
+
+    def breathe(self):
+        print('they can breathe on land')
+
+
+class Amphibians(Aquatic, Terrestrial):
     pass
 
 
-frog = Frog()
-frog.live()
-frog.swim()
-frog.respire()
+amphibians = Amphibians()
+amphibians.swim()
+amphibians.respire()
+amphibians.live()
+amphibians.breathe()
