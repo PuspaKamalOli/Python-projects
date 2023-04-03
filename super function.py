@@ -1,4 +1,4 @@
-# super():used to give access to method of parents class
+# super():used to give access to method of parents class and call parensts class
 class Animal:
     def __init__(self, abdomen, mouth):
         self.abdomen = abdomen
@@ -14,6 +14,7 @@ class Mouse(Animal):
         self.legs = legs
 
     def stomech(self):
+        super().structure()
         print('mices have ' + self.abdomen + 'abdomen')
 
     def features(self):
