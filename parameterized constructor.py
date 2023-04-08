@@ -10,3 +10,6 @@ class MyClass:
         
 obj=MyClass(100,200)
 obj.display()
+#copy constructor
+obj2=obj
+obj.display(
