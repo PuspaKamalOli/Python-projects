@@ -1,12 +1,34 @@
-class MyClass:
-    def my_method(self):
-        return "Original method"
+class A:
 
-obj = MyClass()
-print(obj.my_method())  # Output: Original method
+    def old_method(self):
+        print("this is old method")
+
+    def hi(self):
+        pass
+
+
+def modified_method(self):
+    print("this is modified method")
+
 
 def new_method(self):
-    return "New method"
+    print("this is new method")
 
-MyClass.my_method = new_method
-print(obj.my_method())  # Output: New method
+
+obj = A()
+#before  modification
+
+obj.old_method()
+
+
+#after modification
+A.old_method = modified_method
+obj.old_method()
+
+
+#adding new method in class
+A.new_method = new_method
+obj.new_method()
+
+
+del A.hi
